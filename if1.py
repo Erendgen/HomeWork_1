@@ -1,18 +1,19 @@
-try:
-    age = int(input('Введите возраст: '))
-    def main(age):
-        if age >= 3 and age < 7:
+def main():
+    age = input('Введите возраст: ')
+    if age.isdigit():
+        if int(age) >= 3 and int(age) < 7:
             occupation = 'Детский сад'
-        elif age >= 7 and age < 18:
+        elif int(age) >= 7 and int(age) < 18:
             occupation = 'Школа'
-        elif age >=18 and age < 23:
+        elif int(age) >=18 and int(age) < 23:
             occupation = 'ВУЗ'
-        elif age >=23 and age < 65:
+        elif int(age) >=23 and int(age) < 65:
             occupation =  'Работа'
         else:
             occupation = 'Занятие не определено'
-        return occupation
-    x = main(age)
-    print(x)
-except ValueError:
-    print('Введено не целое число')
+        print(occupation)
+    else:
+        print('Введено не целое неотрицательное число')
+if __name__ == "__main__":    
+    main()
+    

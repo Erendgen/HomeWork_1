@@ -1,4 +1,4 @@
-def main(str1, str2):        
+def test(str1, str2):        
     if isinstance(str1, str) and isinstance(str2, str):
         if str1 == str2:
             return 1
@@ -10,19 +10,12 @@ def main(str1, str2):
             return '"В задаче не описано что возвращать"'
     else:
         return 0
+def main():
+    print(test('QWE','QWE'))
+    print(test('QWE34','QWE'))
+    print(test('QWE34','learn'))
+    print(test(1,'asdasd'))
+    print(test('zxc','asdasdasda'))
 
-str1 = 'QWE'
-str2 = 'QWE'
-print('Строки одинаковые, печатаем ' + str(main(str1, str2)))
-str1 = 'QWE34'
-str2 = 'QWE'
-print('Строки разные и первая строка длиннее, печатаем ' + str(main(str1, str2)))
-str1 = 'QWE34'
-str2 = 'learn'
-print('Строки разные и вторая строка "learn", печатаем ' + str(main(str1, str2)))
-str1 = 1
-str2 = 'asdasd'
-print('Один из аргументов функции не строка, печатаем ' + str(main(str1, str2)))
-str1 = 'sad'
-str2 = 'asdasd'
-print('Не описанный случай в задаче: первая строка короче второй, печатаем ' + str(main(str1, str2)))
+if __name__ == "__main__":    
+    main()
