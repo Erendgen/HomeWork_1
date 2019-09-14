@@ -19,14 +19,14 @@ def ask_user_dist():
     """
     Замените pass на ваш код
     """
-    question = input('Введите вопрос: ')    
-    try:
-        while dict_x[question]:
-            print(dict_x[question])
-            break
+    try:        
+        while True:
+            question = input('Введите вопрос: ')    
+            if dict_x[question]:
+                print(dict_x[question])
     except KeyError:
-        print('Нет такого вопроса')
-
+        print('Нет значения в словаре')
     
 if __name__ == "__main__":
     ask_user_dist()
+    #print(dict_x['Что делаешь?'])
