@@ -24,7 +24,7 @@ def ask_user_dist():
         while dict_x[question]:
             print(dict_x[question])
             break
-    except Exception:
+    except KeyError:
         print('Нет такого вопроса')
 
     
