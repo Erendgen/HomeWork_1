@@ -22,33 +22,13 @@ def main():
     ]
     scores_sum = 0
     scores_count = 0
-    scores_sum_4a = 0
-    scores_count_4a = 0
-    scores_sum_4b = 0
-    scores_count_4b = 0
-    scores_sum_4c = 0
-    scores_count_4c = 0
-    
-    
+
     for i in school:
         scores_sum += sum(i['scores'])
         scores_count += len(i['scores'])
-        if i['school_class'] == '4a':
-            scores_sum_4a += sum(i['scores'])
-            scores_count_4a += len(i['scores'])
-        if i['school_class'] == '4b':
-            scores_sum_4b += sum(i['scores'])
-            scores_count_4b += len(i['scores'])
-        if i['school_class'] == '4c':
-            scores_sum_4c += sum(i['scores'])
-            scores_count_4c += len(i['scores'])        
-            
-
-
+        print(f'Средняя оценка по классу {i["school_class"]} : {sum(i["scores"])/len(i["scores"])}')
+      
     print(f'Средняя оценка по школе: {round(scores_sum/scores_count, 2)}')
-    print(f'Средняя оценка по классу "4a": {round(scores_sum_4a/scores_count_4a, 2)}')
-    print(f'Средняя оценка по классу "4b": {round(scores_sum_4b/scores_count_4b, 2)}')
-    print(f'Средняя оценка по классу "4c": {round(scores_sum_4c/scores_count_4c, 2)}')  
-        
+
 if __name__ == "__main__":
     main()
